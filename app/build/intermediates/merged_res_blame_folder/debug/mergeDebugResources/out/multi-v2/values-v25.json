@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.example.omninote.app-mergeDebugResources-72:/values-v25/values-v25.xml",
+            "map": [
+                {
+                    "source": "/Users/vishnugnair/.gradle/caches/8.13/transforms/60a1185149d0a8c2c4ded69b08ea3d22/transformed/appcompat-1.6.1/res/values-v25/values-v25.xml",
+                    "from": {
+                        "startLines": "2,3,4,6",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,126,209,308",
+                        "endLines": "2,3,5,7",
+                        "endColumns": "70,82,12,12",
+                        "endOffsets": "121,204,303,414"
+                    }
+                }
+            ]
+        }
+    ]
+}
