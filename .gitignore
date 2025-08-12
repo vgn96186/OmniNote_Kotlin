@@ -1,0 +1,34 @@
+# IDE files
+.idea/
+.DS_Store
+*.iml
+
+# Build files
+build/
+app/build/
+*/build/
+
+# Local properties
+local.properties
+
+# Captures and logs
+captures/
+*.log
+
+# Keystore files
+*.jks
+*.keystore
+
+# Gradle files
+.gradle/
+gradlew
+gradlew.bat
+gradle/wrapper/gradle-wrapper.properties
+
+# Other generated files
+*.apk
+*.aab
+*.ap_
+*.dex
+# Heap dump files
+*.hprof
