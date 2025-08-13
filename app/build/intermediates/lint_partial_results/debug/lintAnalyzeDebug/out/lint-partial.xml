@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.12.0" type="partial_results">
+    <map id="UnsafeIntentLaunch">
+            <map id="unprotected">
+                <entry
+                    name="com.example.omninote.MainActivity"
+                    boolean="true"/>
+            </map>
+    </map>
+    <map id="UnusedResources">
+        <entry
+            name="model"
+            string="attr[colorControlNormal(R)],color[ic_launcher_background(U)],drawable[ic_eraser(U),ic_launcher_foreground(U)],mipmap[ic_launcher(U),ic_launcher_round(U)],style[Theme_OmniNote(U),Theme_Material3_Light_NoActionBar(R)],xml[file_paths(U)];2^0,4^1^3,5^1^3,6^7;;;"/>
+    </map>
+
+</incidents>

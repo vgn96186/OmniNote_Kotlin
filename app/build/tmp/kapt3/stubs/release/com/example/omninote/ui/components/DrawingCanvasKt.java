@@ -1,0 +1,12 @@
+package com.example.omninote.ui.components;
+
+@kotlin.Metadata(mv = {2, 2, 0}, k = 2, xi = 48, d1 = {"\u0000F\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0007\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\u001a\u008b\u0001\u0010\u0000\u001a\u00020\u00012\f\u0010\u0002\u001a\b\u0012\u0004\u0012\u00020\u00040\u00032\b\u0010\u0005\u001a\u0004\u0018\u00010\u00042\u0012\u0010\u0006\u001a\u000e\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020\u00010\u00072\u0012\u0010\b\u001a\u000e\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020\u00010\u00072\u0012\u0010\t\u001a\u000e\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020\u00010\u00072\b\b\u0002\u0010\n\u001a\u00020\u000b2\b\b\u0002\u0010\f\u001a\u00020\r2\b\b\u0002\u0010\u000e\u001a\u00020\u000f2\b\b\u0002\u0010\u0010\u001a\u00020\u0011H\u0007\u00a2\u0006\u0004\b\u0012\u0010\u0013\u001a\u0014\u0010\u0014\u001a\u00020\u0001*\u00020\u00152\u0006\u0010\u0016\u001a\u00020\u0004H\u0002\u001a\u001c\u0010\u0017\u001a\b\u0012\u0004\u0012\u00020\u00180\u00032\f\u0010\u0019\u001a\b\u0012\u0004\u0012\u00020\u00180\u0003H\u0002\u00a8\u0006\u001a"}, d2 = {"DrawingCanvas", "", "strokes", "", "Lcom/example/omninote/data/Stroke;", "currentStroke", "onStrokeStart", "Lkotlin/Function1;", "onStrokeUpdate", "onStrokeEnd", "toolType", "Lcom/example/omninote/data/ToolType;", "strokeColor", "Landroidx/compose/ui/graphics/Color;", "strokeWidth", "", "modifier", "Landroidx/compose/ui/Modifier;", "DrawingCanvas-3EhgFcU", "(Ljava/util/List;Lcom/example/omninote/data/Stroke;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lcom/example/omninote/data/ToolType;JFLandroidx/compose/ui/Modifier;)V", "drawStroke", "Landroidx/compose/ui/graphics/drawscope/DrawScope;", "stroke", "smoothPoints", "Lcom/example/omninote/data/Point;", "points", "app_release"})
+public final class DrawingCanvasKt {
+    
+    private static final void drawStroke(androidx.compose.ui.graphics.drawscope.DrawScope $this$drawStroke, com.example.omninote.data.Stroke stroke) {
+    }
+    
+    private static final java.util.List<com.example.omninote.data.Point> smoothPoints(java.util.List<com.example.omninote.data.Point> points) {
+        return null;
+    }
+}
