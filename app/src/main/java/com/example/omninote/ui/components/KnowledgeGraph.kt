@@ -18,6 +18,7 @@ import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.graphics.drawscope.scale
 import androidx.compose.ui.graphics.drawscope.translate
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -249,6 +250,77 @@ fun KnowledgeGraphList(
                     }
                 }
             }
+        }
+    }
+}
+
+@Composable
+fun EnhancedKnowledgeGraph(
+    notes: List<Note>,
+    graphData: Map<Long, List<Long>>,
+    onNoteSelected: (Note) -> Unit,
+    selectedNoteId: Long? = null,
+    modifier: Modifier = Modifier
+) {
+    var scaleFactor by remember { mutableStateOf(1f) }
+    var offset by remember { mutableStateOf(Offset.Zero) }
+
+    Box(
+        modifier = modifier
+            .fillMaxSize()
+            .background(
+                brush = Brush.radialGradient(
+                    colors = listOf(Color(0xFF1E1E1E), Color(0xFF121212)),
+                    center = Offset.Infinite,
+                    radius = 1000f
+                )
+            )
+    ) {
+        Canvas(
+            modifier = Modifier
+                .fillMaxSize()
+                .pointerInput(Unit) {
+                    detectTransformGestures { _, pan, zoom, _ ->
+                        scaleFactor = (scaleFactor * zoom).coerceIn(0.25f, 4f)
+                        offset += pan
+                    }
+                }
+        ) {
+            val nodePositions = calculateNodePositions(notes.size, size.width, size.height)
+
+            translate(left = offset.x, top = offset.y) {
+                scale(scale = scaleFactor, pivot = center) {
+                    graphData.forEach { (sourceId, targetIds) ->
+                        val sourceIndex = notes.indexOfFirst { it.id == sourceId }
+                        if (sourceIndex != -1) {
+                            val sourcePos = nodePositions[sourceIndex]
+                            targetIds.forEach { targetId ->
+                                val targetIndex = notes.indexOfFirst { it.id == targetId }
+                                if (targetIndex != -1) {
+                                    val targetPos = nodePositions[targetIndex]
+                                    drawConnection(sourcePos, targetPos)
+                                }
+                            }
+                        }
+                    }
+
+                    notes.forEachIndexed { index, note ->
+                        val position = nodePositions[index]
+                        val isSelected = note.id == selectedNoteId
+                        drawNode(position, note.title, isSelected)
+                    }
+                }
+            }
+        }
+
+        Button(
+            onClick = {
+                scaleFactor = 1f
+                offset = Offset.Zero
+            },
+            modifier = Modifier.align(Alignment.TopStart).padding(16.dp)
+        ) {
+            Text("Reset View")
         }
     }
 }

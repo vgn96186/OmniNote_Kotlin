@@ -41,7 +41,6 @@
         android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:testOnly="true"
         android:theme="@style/Theme.OmniNote" >
         <activity
             android:name="com.example.omninote.MainActivity"

@@ -10,200 +10,199 @@
 10
 11    <!-- Permissions -->
 12    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-12-->/Users/vishnugnair/Downloads/OmniNote_Kotlin/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:6:5-80
-12-->/Users/vishnugnair/Downloads/OmniNote_Kotlin/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:6:22-77
+12-->/workspaces/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:5:5-80
+12-->/workspaces/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:5:22-77
 13    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-13-->/Users/vishnugnair/Downloads/OmniNote_Kotlin/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:7:5-81
-13-->/Users/vishnugnair/Downloads/OmniNote_Kotlin/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:7:22-78
+13-->/workspaces/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:6:5-81
+13-->/workspaces/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:6:22-78
 14    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
-14-->/Users/vishnugnair/Downloads/OmniNote_Kotlin/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:8:5-82
-14-->/Users/vishnugnair/Downloads/OmniNote_Kotlin/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:8:22-79
+14-->/workspaces/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:7:5-82
+14-->/workspaces/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:7:22-79
 15    <uses-permission android:name="android.permission.CAMERA" />
-15-->/Users/vishnugnair/Downloads/OmniNote_Kotlin/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:9:5-65
-15-->/Users/vishnugnair/Downloads/OmniNote_Kotlin/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:9:22-62
+15-->/workspaces/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:8:5-65
+15-->/workspaces/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:8:22-62
 16
 17    <!-- S Pen support -->
 18    <uses-feature
-18-->/Users/vishnugnair/Downloads/OmniNote_Kotlin/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:12:5-89
+18-->/workspaces/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:11:5-89
 19        android:name="android.hardware.touchscreen"
-19-->/Users/vishnugnair/Downloads/OmniNote_Kotlin/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:12:19-62
+19-->/workspaces/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:11:19-62
 20        android:required="true" />
-20-->/Users/vishnugnair/Downloads/OmniNote_Kotlin/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:12:63-86
+20-->/workspaces/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:11:63-86
 21    <uses-feature
-21-->/Users/vishnugnair/Downloads/OmniNote_Kotlin/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:13:5-97
+21-->/workspaces/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:12:5-97
 22        android:name="android.hardware.touchscreen.stylus"
-22-->/Users/vishnugnair/Downloads/OmniNote_Kotlin/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:13:19-69
+22-->/workspaces/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:12:19-69
 23        android:required="false" />
-23-->/Users/vishnugnair/Downloads/OmniNote_Kotlin/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:13:70-94
+23-->/workspaces/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:12:70-94
 24    <uses-feature
-24-->/Users/vishnugnair/Downloads/OmniNote_Kotlin/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:14:5-16:36
+24-->/workspaces/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:13:5-15:36
 25        android:name="android.hardware.camera"
-25-->/Users/vishnugnair/Downloads/OmniNote_Kotlin/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:15:9-47
+25-->/workspaces/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:14:9-47
 26        android:required="false" />
-26-->/Users/vishnugnair/Downloads/OmniNote_Kotlin/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:16:9-33
+26-->/workspaces/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:15:9-33
 27
 28    <permission
-28-->[androidx.core:core:1.16.0] /Users/vishnugnair/.gradle/caches/8.13/transforms/b08b6125023f94d3799fe3eb45c01d92/transformed/core-1.16.0/AndroidManifest.xml:22:5-24:47
+28-->[androidx.core:core:1.16.0] /home/codespace/.gradle/caches/8.14.2/transforms/1900cfc0a057140389eb2befd4a08235/transformed/core-1.16.0/AndroidManifest.xml:22:5-24:47
 29        android:name="com.example.omninote.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-29-->[androidx.core:core:1.16.0] /Users/vishnugnair/.gradle/caches/8.13/transforms/b08b6125023f94d3799fe3eb45c01d92/transformed/core-1.16.0/AndroidManifest.xml:23:9-81
+29-->[androidx.core:core:1.16.0] /home/codespace/.gradle/caches/8.14.2/transforms/1900cfc0a057140389eb2befd4a08235/transformed/core-1.16.0/AndroidManifest.xml:23:9-81
 30        android:protectionLevel="signature" />
-30-->[androidx.core:core:1.16.0] /Users/vishnugnair/.gradle/caches/8.13/transforms/b08b6125023f94d3799fe3eb45c01d92/transformed/core-1.16.0/AndroidManifest.xml:24:9-44
+30-->[androidx.core:core:1.16.0] /home/codespace/.gradle/caches/8.14.2/transforms/1900cfc0a057140389eb2befd4a08235/transformed/core-1.16.0/AndroidManifest.xml:24:9-44
 31
 32    <uses-permission android:name="com.example.omninote.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-32-->[androidx.core:core:1.16.0] /Users/vishnugnair/.gradle/caches/8.13/transforms/b08b6125023f94d3799fe3eb45c01d92/transformed/core-1.16.0/AndroidManifest.xml:26:5-97
-32-->[androidx.core:core:1.16.0] /Users/vishnugnair/.gradle/caches/8.13/transforms/b08b6125023f94d3799fe3eb45c01d92/transformed/core-1.16.0/AndroidManifest.xml:26:22-94
+32-->[androidx.core:core:1.16.0] /home/codespace/.gradle/caches/8.14.2/transforms/1900cfc0a057140389eb2befd4a08235/transformed/core-1.16.0/AndroidManifest.xml:26:5-97
+32-->[androidx.core:core:1.16.0] /home/codespace/.gradle/caches/8.14.2/transforms/1900cfc0a057140389eb2befd4a08235/transformed/core-1.16.0/AndroidManifest.xml:26:22-94
 33
 34    <application
-34-->/Users/vishnugnair/Downloads/OmniNote_Kotlin/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:18:5-50:19
+34-->/workspaces/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:17:5-49:19
 35        android:allowBackup="true"
-35-->/Users/vishnugnair/Downloads/OmniNote_Kotlin/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:19:9-35
+35-->/workspaces/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:18:9-35
 36        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-36-->[androidx.core:core:1.16.0] /Users/vishnugnair/.gradle/caches/8.13/transforms/b08b6125023f94d3799fe3eb45c01d92/transformed/core-1.16.0/AndroidManifest.xml:28:18-86
+36-->[androidx.core:core:1.16.0] /home/codespace/.gradle/caches/8.14.2/transforms/1900cfc0a057140389eb2befd4a08235/transformed/core-1.16.0/AndroidManifest.xml:28:18-86
 37        android:debuggable="true"
 38        android:extractNativeLibs="false"
 39        android:icon="@mipmap/ic_launcher"
-39-->/Users/vishnugnair/Downloads/OmniNote_Kotlin/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:20:9-43
+39-->/workspaces/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:19:9-43
 40        android:label="OmniNote"
-40-->/Users/vishnugnair/Downloads/OmniNote_Kotlin/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:21:9-33
+40-->/workspaces/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:20:9-33
 41        android:requestLegacyExternalStorage="true"
-41-->/Users/vishnugnair/Downloads/OmniNote_Kotlin/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:25:9-52
+41-->/workspaces/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:24:9-52
 42        android:roundIcon="@mipmap/ic_launcher_round"
-42-->/Users/vishnugnair/Downloads/OmniNote_Kotlin/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:22:9-54
+42-->/workspaces/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:21:9-54
 43        android:supportsRtl="true"
-43-->/Users/vishnugnair/Downloads/OmniNote_Kotlin/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:23:9-35
-44        android:testOnly="true"
-45        android:theme="@style/Theme.OmniNote" >
-45-->/Users/vishnugnair/Downloads/OmniNote_Kotlin/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:24:9-46
-46        <activity
-46-->/Users/vishnugnair/Downloads/OmniNote_Kotlin/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:27:9-37:20
-47            android:name="com.example.omninote.MainActivity"
-47-->/Users/vishnugnair/Downloads/OmniNote_Kotlin/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:28:13-41
-48            android:configChanges="orientation|keyboardHidden|screenSize"
-48-->/Users/vishnugnair/Downloads/OmniNote_Kotlin/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:32:13-74
-49            android:exported="true"
-49-->/Users/vishnugnair/Downloads/OmniNote_Kotlin/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:29:13-36
-50            android:screenOrientation="landscape"
-50-->/Users/vishnugnair/Downloads/OmniNote_Kotlin/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:31:13-50
-51            android:theme="@style/Theme.OmniNote" >
-51-->/Users/vishnugnair/Downloads/OmniNote_Kotlin/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:30:13-50
-52            <intent-filter>
-52-->/Users/vishnugnair/Downloads/OmniNote_Kotlin/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:33:13-36:29
-53                <action android:name="android.intent.action.MAIN" />
-53-->/Users/vishnugnair/Downloads/OmniNote_Kotlin/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:34:17-69
-53-->/Users/vishnugnair/Downloads/OmniNote_Kotlin/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:34:25-66
-54
-55                <category android:name="android.intent.category.LAUNCHER" />
-55-->/Users/vishnugnair/Downloads/OmniNote_Kotlin/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:35:17-77
-55-->/Users/vishnugnair/Downloads/OmniNote_Kotlin/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:35:27-74
-56            </intent-filter>
-57        </activity>
-58
-59        <!-- File provider for sharing -->
-60        <provider
-61            android:name="androidx.core.content.FileProvider"
-61-->/Users/vishnugnair/Downloads/OmniNote_Kotlin/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:41:13-62
-62            android:authorities="com.example.omninote.fileprovider"
-62-->/Users/vishnugnair/Downloads/OmniNote_Kotlin/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:42:13-64
-63            android:exported="false"
-63-->/Users/vishnugnair/Downloads/OmniNote_Kotlin/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:43:13-37
-64            android:grantUriPermissions="true" >
-64-->/Users/vishnugnair/Downloads/OmniNote_Kotlin/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:44:13-47
-65            <meta-data
-65-->/Users/vishnugnair/Downloads/OmniNote_Kotlin/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:45:13-47:54
-66                android:name="android.support.FILE_PROVIDER_PATHS"
-66-->/Users/vishnugnair/Downloads/OmniNote_Kotlin/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:46:17-67
-67                android:resource="@xml/file_paths" />
-67-->/Users/vishnugnair/Downloads/OmniNote_Kotlin/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:47:17-51
-68        </provider>
-69        <provider
-69-->[androidx.emoji2:emoji2:1.4.0] /Users/vishnugnair/.gradle/caches/8.13/transforms/246d71a386da08fc8e186dc7ae395d87/transformed/emoji2-1.4.0/AndroidManifest.xml:24:9-32:20
-70            android:name="androidx.startup.InitializationProvider"
-70-->[androidx.emoji2:emoji2:1.4.0] /Users/vishnugnair/.gradle/caches/8.13/transforms/246d71a386da08fc8e186dc7ae395d87/transformed/emoji2-1.4.0/AndroidManifest.xml:25:13-67
-71            android:authorities="com.example.omninote.androidx-startup"
-71-->[androidx.emoji2:emoji2:1.4.0] /Users/vishnugnair/.gradle/caches/8.13/transforms/246d71a386da08fc8e186dc7ae395d87/transformed/emoji2-1.4.0/AndroidManifest.xml:26:13-68
-72            android:exported="false" >
-72-->[androidx.emoji2:emoji2:1.4.0] /Users/vishnugnair/.gradle/caches/8.13/transforms/246d71a386da08fc8e186dc7ae395d87/transformed/emoji2-1.4.0/AndroidManifest.xml:27:13-37
-73            <meta-data
-73-->[androidx.emoji2:emoji2:1.4.0] /Users/vishnugnair/.gradle/caches/8.13/transforms/246d71a386da08fc8e186dc7ae395d87/transformed/emoji2-1.4.0/AndroidManifest.xml:29:13-31:52
-74                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-74-->[androidx.emoji2:emoji2:1.4.0] /Users/vishnugnair/.gradle/caches/8.13/transforms/246d71a386da08fc8e186dc7ae395d87/transformed/emoji2-1.4.0/AndroidManifest.xml:30:17-75
-75                android:value="androidx.startup" />
-75-->[androidx.emoji2:emoji2:1.4.0] /Users/vishnugnair/.gradle/caches/8.13/transforms/246d71a386da08fc8e186dc7ae395d87/transformed/emoji2-1.4.0/AndroidManifest.xml:31:17-49
-76            <meta-data
-76-->[androidx.lifecycle:lifecycle-process:2.9.2] /Users/vishnugnair/.gradle/caches/8.13/transforms/a9d2b7d0d590611cef2895ac6860a8f4/transformed/lifecycle-process-2.9.2/AndroidManifest.xml:29:13-31:52
-77                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-77-->[androidx.lifecycle:lifecycle-process:2.9.2] /Users/vishnugnair/.gradle/caches/8.13/transforms/a9d2b7d0d590611cef2895ac6860a8f4/transformed/lifecycle-process-2.9.2/AndroidManifest.xml:30:17-78
-78                android:value="androidx.startup" />
-78-->[androidx.lifecycle:lifecycle-process:2.9.2] /Users/vishnugnair/.gradle/caches/8.13/transforms/a9d2b7d0d590611cef2895ac6860a8f4/transformed/lifecycle-process-2.9.2/AndroidManifest.xml:31:17-49
-79            <meta-data
-79-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/vishnugnair/.gradle/caches/8.13/transforms/d1b58572794ae3eb62d20fc116c735fc/transformed/profileinstaller-1.4.0/AndroidManifest.xml:29:13-31:52
-80                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-80-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/vishnugnair/.gradle/caches/8.13/transforms/d1b58572794ae3eb62d20fc116c735fc/transformed/profileinstaller-1.4.0/AndroidManifest.xml:30:17-85
-81                android:value="androidx.startup" />
-81-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/vishnugnair/.gradle/caches/8.13/transforms/d1b58572794ae3eb62d20fc116c735fc/transformed/profileinstaller-1.4.0/AndroidManifest.xml:31:17-49
-82        </provider>
-83
-84        <activity
-84-->[androidx.compose.ui:ui-test-manifest:1.8.3] /Users/vishnugnair/.gradle/caches/8.13/transforms/1f345ced57c9d1aea4c6c972067595a6/transformed/ui-test-manifest-1.8.3/AndroidManifest.xml:23:9-26:79
-85            android:name="androidx.activity.ComponentActivity"
-85-->[androidx.compose.ui:ui-test-manifest:1.8.3] /Users/vishnugnair/.gradle/caches/8.13/transforms/1f345ced57c9d1aea4c6c972067595a6/transformed/ui-test-manifest-1.8.3/AndroidManifest.xml:24:13-63
-86            android:exported="true"
-86-->[androidx.compose.ui:ui-test-manifest:1.8.3] /Users/vishnugnair/.gradle/caches/8.13/transforms/1f345ced57c9d1aea4c6c972067595a6/transformed/ui-test-manifest-1.8.3/AndroidManifest.xml:25:13-36
-87            android:theme="@android:style/Theme.Material.Light.NoActionBar" />
-87-->[androidx.compose.ui:ui-test-manifest:1.8.3] /Users/vishnugnair/.gradle/caches/8.13/transforms/1f345ced57c9d1aea4c6c972067595a6/transformed/ui-test-manifest-1.8.3/AndroidManifest.xml:26:13-76
-88        <activity
-88-->[androidx.compose.ui:ui-tooling-android:1.8.3] /Users/vishnugnair/.gradle/caches/8.13/transforms/4b205d3c0308baf7eb74c1dca679ff8f/transformed/ui-tooling-release/AndroidManifest.xml:23:9-25:39
-89            android:name="androidx.compose.ui.tooling.PreviewActivity"
-89-->[androidx.compose.ui:ui-tooling-android:1.8.3] /Users/vishnugnair/.gradle/caches/8.13/transforms/4b205d3c0308baf7eb74c1dca679ff8f/transformed/ui-tooling-release/AndroidManifest.xml:24:13-71
-90            android:exported="true" />
-90-->[androidx.compose.ui:ui-tooling-android:1.8.3] /Users/vishnugnair/.gradle/caches/8.13/transforms/4b205d3c0308baf7eb74c1dca679ff8f/transformed/ui-tooling-release/AndroidManifest.xml:25:13-36
-91
-92        <service
-92-->[androidx.room:room-runtime-android:2.7.2] /Users/vishnugnair/.gradle/caches/8.13/transforms/a49cdc9493923f48f7a5290734c31e7c/transformed/room-runtime-release/AndroidManifest.xml:24:9-28:63
-93            android:name="androidx.room.MultiInstanceInvalidationService"
-93-->[androidx.room:room-runtime-android:2.7.2] /Users/vishnugnair/.gradle/caches/8.13/transforms/a49cdc9493923f48f7a5290734c31e7c/transformed/room-runtime-release/AndroidManifest.xml:25:13-74
-94            android:directBootAware="true"
-94-->[androidx.room:room-runtime-android:2.7.2] /Users/vishnugnair/.gradle/caches/8.13/transforms/a49cdc9493923f48f7a5290734c31e7c/transformed/room-runtime-release/AndroidManifest.xml:26:13-43
-95            android:exported="false" />
-95-->[androidx.room:room-runtime-android:2.7.2] /Users/vishnugnair/.gradle/caches/8.13/transforms/a49cdc9493923f48f7a5290734c31e7c/transformed/room-runtime-release/AndroidManifest.xml:27:13-37
-96
-97        <receiver
-97-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/vishnugnair/.gradle/caches/8.13/transforms/d1b58572794ae3eb62d20fc116c735fc/transformed/profileinstaller-1.4.0/AndroidManifest.xml:34:9-52:20
-98            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-98-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/vishnugnair/.gradle/caches/8.13/transforms/d1b58572794ae3eb62d20fc116c735fc/transformed/profileinstaller-1.4.0/AndroidManifest.xml:35:13-76
-99            android:directBootAware="false"
-99-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/vishnugnair/.gradle/caches/8.13/transforms/d1b58572794ae3eb62d20fc116c735fc/transformed/profileinstaller-1.4.0/AndroidManifest.xml:36:13-44
-100            android:enabled="true"
-100-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/vishnugnair/.gradle/caches/8.13/transforms/d1b58572794ae3eb62d20fc116c735fc/transformed/profileinstaller-1.4.0/AndroidManifest.xml:37:13-35
-101            android:exported="true"
-101-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/vishnugnair/.gradle/caches/8.13/transforms/d1b58572794ae3eb62d20fc116c735fc/transformed/profileinstaller-1.4.0/AndroidManifest.xml:38:13-36
-102            android:permission="android.permission.DUMP" >
-102-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/vishnugnair/.gradle/caches/8.13/transforms/d1b58572794ae3eb62d20fc116c735fc/transformed/profileinstaller-1.4.0/AndroidManifest.xml:39:13-57
-103            <intent-filter>
-103-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/vishnugnair/.gradle/caches/8.13/transforms/d1b58572794ae3eb62d20fc116c735fc/transformed/profileinstaller-1.4.0/AndroidManifest.xml:40:13-42:29
-104                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-104-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/vishnugnair/.gradle/caches/8.13/transforms/d1b58572794ae3eb62d20fc116c735fc/transformed/profileinstaller-1.4.0/AndroidManifest.xml:41:17-91
-104-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/vishnugnair/.gradle/caches/8.13/transforms/d1b58572794ae3eb62d20fc116c735fc/transformed/profileinstaller-1.4.0/AndroidManifest.xml:41:25-88
-105            </intent-filter>
-106            <intent-filter>
-106-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/vishnugnair/.gradle/caches/8.13/transforms/d1b58572794ae3eb62d20fc116c735fc/transformed/profileinstaller-1.4.0/AndroidManifest.xml:43:13-45:29
-107                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-107-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/vishnugnair/.gradle/caches/8.13/transforms/d1b58572794ae3eb62d20fc116c735fc/transformed/profileinstaller-1.4.0/AndroidManifest.xml:44:17-85
-107-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/vishnugnair/.gradle/caches/8.13/transforms/d1b58572794ae3eb62d20fc116c735fc/transformed/profileinstaller-1.4.0/AndroidManifest.xml:44:25-82
-108            </intent-filter>
-109            <intent-filter>
-109-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/vishnugnair/.gradle/caches/8.13/transforms/d1b58572794ae3eb62d20fc116c735fc/transformed/profileinstaller-1.4.0/AndroidManifest.xml:46:13-48:29
-110                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-110-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/vishnugnair/.gradle/caches/8.13/transforms/d1b58572794ae3eb62d20fc116c735fc/transformed/profileinstaller-1.4.0/AndroidManifest.xml:47:17-88
-110-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/vishnugnair/.gradle/caches/8.13/transforms/d1b58572794ae3eb62d20fc116c735fc/transformed/profileinstaller-1.4.0/AndroidManifest.xml:47:25-85
-111            </intent-filter>
-112            <intent-filter>
-112-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/vishnugnair/.gradle/caches/8.13/transforms/d1b58572794ae3eb62d20fc116c735fc/transformed/profileinstaller-1.4.0/AndroidManifest.xml:49:13-51:29
-113                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-113-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/vishnugnair/.gradle/caches/8.13/transforms/d1b58572794ae3eb62d20fc116c735fc/transformed/profileinstaller-1.4.0/AndroidManifest.xml:50:17-95
-113-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/vishnugnair/.gradle/caches/8.13/transforms/d1b58572794ae3eb62d20fc116c735fc/transformed/profileinstaller-1.4.0/AndroidManifest.xml:50:25-92
-114            </intent-filter>
-115        </receiver>
-116    </application>
-117
-118</manifest>
+43-->/workspaces/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:22:9-35
+44        android:theme="@style/Theme.OmniNote" >
+44-->/workspaces/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:23:9-46
+45        <activity
+45-->/workspaces/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:26:9-36:20
+46            android:name="com.example.omninote.MainActivity"
+46-->/workspaces/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:27:13-41
+47            android:configChanges="orientation|keyboardHidden|screenSize"
+47-->/workspaces/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:31:13-74
+48            android:exported="true"
+48-->/workspaces/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:28:13-36
+49            android:screenOrientation="landscape"
+49-->/workspaces/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:30:13-50
+50            android:theme="@style/Theme.OmniNote" >
+50-->/workspaces/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:29:13-50
+51            <intent-filter>
+51-->/workspaces/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:32:13-35:29
+52                <action android:name="android.intent.action.MAIN" />
+52-->/workspaces/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:33:17-69
+52-->/workspaces/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:33:25-66
+53
+54                <category android:name="android.intent.category.LAUNCHER" />
+54-->/workspaces/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:34:17-77
+54-->/workspaces/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:34:27-74
+55            </intent-filter>
+56        </activity>
+57
+58        <!-- File provider for sharing -->
+59        <provider
+60            android:name="androidx.core.content.FileProvider"
+60-->/workspaces/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:40:13-62
+61            android:authorities="com.example.omninote.fileprovider"
+61-->/workspaces/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:41:13-64
+62            android:exported="false"
+62-->/workspaces/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:42:13-37
+63            android:grantUriPermissions="true" >
+63-->/workspaces/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:43:13-47
+64            <meta-data
+64-->/workspaces/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:44:13-46:54
+65                android:name="android.support.FILE_PROVIDER_PATHS"
+65-->/workspaces/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:45:17-67
+66                android:resource="@xml/file_paths" />
+66-->/workspaces/OmniNote_Kotlin/app/src/main/AndroidManifest.xml:46:17-51
+67        </provider>
+68        <provider
+68-->[androidx.emoji2:emoji2:1.4.0] /home/codespace/.gradle/caches/8.14.2/transforms/d86e60b5d145bf423b77095a392eea57/transformed/emoji2-1.4.0/AndroidManifest.xml:24:9-32:20
+69            android:name="androidx.startup.InitializationProvider"
+69-->[androidx.emoji2:emoji2:1.4.0] /home/codespace/.gradle/caches/8.14.2/transforms/d86e60b5d145bf423b77095a392eea57/transformed/emoji2-1.4.0/AndroidManifest.xml:25:13-67
+70            android:authorities="com.example.omninote.androidx-startup"
+70-->[androidx.emoji2:emoji2:1.4.0] /home/codespace/.gradle/caches/8.14.2/transforms/d86e60b5d145bf423b77095a392eea57/transformed/emoji2-1.4.0/AndroidManifest.xml:26:13-68
+71            android:exported="false" >
+71-->[androidx.emoji2:emoji2:1.4.0] /home/codespace/.gradle/caches/8.14.2/transforms/d86e60b5d145bf423b77095a392eea57/transformed/emoji2-1.4.0/AndroidManifest.xml:27:13-37
+72            <meta-data
+72-->[androidx.emoji2:emoji2:1.4.0] /home/codespace/.gradle/caches/8.14.2/transforms/d86e60b5d145bf423b77095a392eea57/transformed/emoji2-1.4.0/AndroidManifest.xml:29:13-31:52
+73                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+73-->[androidx.emoji2:emoji2:1.4.0] /home/codespace/.gradle/caches/8.14.2/transforms/d86e60b5d145bf423b77095a392eea57/transformed/emoji2-1.4.0/AndroidManifest.xml:30:17-75
+74                android:value="androidx.startup" />
+74-->[androidx.emoji2:emoji2:1.4.0] /home/codespace/.gradle/caches/8.14.2/transforms/d86e60b5d145bf423b77095a392eea57/transformed/emoji2-1.4.0/AndroidManifest.xml:31:17-49
+75            <meta-data
+75-->[androidx.lifecycle:lifecycle-process:2.9.2] /home/codespace/.gradle/caches/8.14.2/transforms/85fb4b1885694c4f25696efcbe0cb957/transformed/lifecycle-process-2.9.2/AndroidManifest.xml:29:13-31:52
+76                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+76-->[androidx.lifecycle:lifecycle-process:2.9.2] /home/codespace/.gradle/caches/8.14.2/transforms/85fb4b1885694c4f25696efcbe0cb957/transformed/lifecycle-process-2.9.2/AndroidManifest.xml:30:17-78
+77                android:value="androidx.startup" />
+77-->[androidx.lifecycle:lifecycle-process:2.9.2] /home/codespace/.gradle/caches/8.14.2/transforms/85fb4b1885694c4f25696efcbe0cb957/transformed/lifecycle-process-2.9.2/AndroidManifest.xml:31:17-49
+78            <meta-data
+78-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/codespace/.gradle/caches/8.14.2/transforms/e1f69cdce1fdd0e8f6ad70b6d495dcf5/transformed/profileinstaller-1.4.0/AndroidManifest.xml:29:13-31:52
+79                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+79-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/codespace/.gradle/caches/8.14.2/transforms/e1f69cdce1fdd0e8f6ad70b6d495dcf5/transformed/profileinstaller-1.4.0/AndroidManifest.xml:30:17-85
+80                android:value="androidx.startup" />
+80-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/codespace/.gradle/caches/8.14.2/transforms/e1f69cdce1fdd0e8f6ad70b6d495dcf5/transformed/profileinstaller-1.4.0/AndroidManifest.xml:31:17-49
+81        </provider>
+82
+83        <activity
+83-->[androidx.compose.ui:ui-test-manifest:1.8.3] /home/codespace/.gradle/caches/8.14.2/transforms/5d2b3c73cc12dcfd01771d64ddc43438/transformed/ui-test-manifest-1.8.3/AndroidManifest.xml:23:9-26:79
+84            android:name="androidx.activity.ComponentActivity"
+84-->[androidx.compose.ui:ui-test-manifest:1.8.3] /home/codespace/.gradle/caches/8.14.2/transforms/5d2b3c73cc12dcfd01771d64ddc43438/transformed/ui-test-manifest-1.8.3/AndroidManifest.xml:24:13-63
+85            android:exported="true"
+85-->[androidx.compose.ui:ui-test-manifest:1.8.3] /home/codespace/.gradle/caches/8.14.2/transforms/5d2b3c73cc12dcfd01771d64ddc43438/transformed/ui-test-manifest-1.8.3/AndroidManifest.xml:25:13-36
+86            android:theme="@android:style/Theme.Material.Light.NoActionBar" />
+86-->[androidx.compose.ui:ui-test-manifest:1.8.3] /home/codespace/.gradle/caches/8.14.2/transforms/5d2b3c73cc12dcfd01771d64ddc43438/transformed/ui-test-manifest-1.8.3/AndroidManifest.xml:26:13-76
+87        <activity
+87-->[androidx.compose.ui:ui-tooling-android:1.8.3] /home/codespace/.gradle/caches/8.14.2/transforms/247ccf049d57aeab2a6b16fb2adc77a8/transformed/ui-tooling-release/AndroidManifest.xml:23:9-25:39
+88            android:name="androidx.compose.ui.tooling.PreviewActivity"
+88-->[androidx.compose.ui:ui-tooling-android:1.8.3] /home/codespace/.gradle/caches/8.14.2/transforms/247ccf049d57aeab2a6b16fb2adc77a8/transformed/ui-tooling-release/AndroidManifest.xml:24:13-71
+89            android:exported="true" />
+89-->[androidx.compose.ui:ui-tooling-android:1.8.3] /home/codespace/.gradle/caches/8.14.2/transforms/247ccf049d57aeab2a6b16fb2adc77a8/transformed/ui-tooling-release/AndroidManifest.xml:25:13-36
+90
+91        <service
+91-->[androidx.room:room-runtime-android:2.7.2] /home/codespace/.gradle/caches/8.14.2/transforms/b4b1e6755838cbd75e920a50832fb697/transformed/room-runtime-release/AndroidManifest.xml:24:9-28:63
+92            android:name="androidx.room.MultiInstanceInvalidationService"
+92-->[androidx.room:room-runtime-android:2.7.2] /home/codespace/.gradle/caches/8.14.2/transforms/b4b1e6755838cbd75e920a50832fb697/transformed/room-runtime-release/AndroidManifest.xml:25:13-74
+93            android:directBootAware="true"
+93-->[androidx.room:room-runtime-android:2.7.2] /home/codespace/.gradle/caches/8.14.2/transforms/b4b1e6755838cbd75e920a50832fb697/transformed/room-runtime-release/AndroidManifest.xml:26:13-43
+94            android:exported="false" />
+94-->[androidx.room:room-runtime-android:2.7.2] /home/codespace/.gradle/caches/8.14.2/transforms/b4b1e6755838cbd75e920a50832fb697/transformed/room-runtime-release/AndroidManifest.xml:27:13-37
+95
+96        <receiver
+96-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/codespace/.gradle/caches/8.14.2/transforms/e1f69cdce1fdd0e8f6ad70b6d495dcf5/transformed/profileinstaller-1.4.0/AndroidManifest.xml:34:9-52:20
+97            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+97-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/codespace/.gradle/caches/8.14.2/transforms/e1f69cdce1fdd0e8f6ad70b6d495dcf5/transformed/profileinstaller-1.4.0/AndroidManifest.xml:35:13-76
+98            android:directBootAware="false"
+98-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/codespace/.gradle/caches/8.14.2/transforms/e1f69cdce1fdd0e8f6ad70b6d495dcf5/transformed/profileinstaller-1.4.0/AndroidManifest.xml:36:13-44
+99            android:enabled="true"
+99-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/codespace/.gradle/caches/8.14.2/transforms/e1f69cdce1fdd0e8f6ad70b6d495dcf5/transformed/profileinstaller-1.4.0/AndroidManifest.xml:37:13-35
+100            android:exported="true"
+100-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/codespace/.gradle/caches/8.14.2/transforms/e1f69cdce1fdd0e8f6ad70b6d495dcf5/transformed/profileinstaller-1.4.0/AndroidManifest.xml:38:13-36
+101            android:permission="android.permission.DUMP" >
+101-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/codespace/.gradle/caches/8.14.2/transforms/e1f69cdce1fdd0e8f6ad70b6d495dcf5/transformed/profileinstaller-1.4.0/AndroidManifest.xml:39:13-57
+102            <intent-filter>
+102-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/codespace/.gradle/caches/8.14.2/transforms/e1f69cdce1fdd0e8f6ad70b6d495dcf5/transformed/profileinstaller-1.4.0/AndroidManifest.xml:40:13-42:29
+103                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+103-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/codespace/.gradle/caches/8.14.2/transforms/e1f69cdce1fdd0e8f6ad70b6d495dcf5/transformed/profileinstaller-1.4.0/AndroidManifest.xml:41:17-91
+103-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/codespace/.gradle/caches/8.14.2/transforms/e1f69cdce1fdd0e8f6ad70b6d495dcf5/transformed/profileinstaller-1.4.0/AndroidManifest.xml:41:25-88
+104            </intent-filter>
+105            <intent-filter>
+105-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/codespace/.gradle/caches/8.14.2/transforms/e1f69cdce1fdd0e8f6ad70b6d495dcf5/transformed/profileinstaller-1.4.0/AndroidManifest.xml:43:13-45:29
+106                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+106-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/codespace/.gradle/caches/8.14.2/transforms/e1f69cdce1fdd0e8f6ad70b6d495dcf5/transformed/profileinstaller-1.4.0/AndroidManifest.xml:44:17-85
+106-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/codespace/.gradle/caches/8.14.2/transforms/e1f69cdce1fdd0e8f6ad70b6d495dcf5/transformed/profileinstaller-1.4.0/AndroidManifest.xml:44:25-82
+107            </intent-filter>
+108            <intent-filter>
+108-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/codespace/.gradle/caches/8.14.2/transforms/e1f69cdce1fdd0e8f6ad70b6d495dcf5/transformed/profileinstaller-1.4.0/AndroidManifest.xml:46:13-48:29
+109                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+109-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/codespace/.gradle/caches/8.14.2/transforms/e1f69cdce1fdd0e8f6ad70b6d495dcf5/transformed/profileinstaller-1.4.0/AndroidManifest.xml:47:17-88
+109-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/codespace/.gradle/caches/8.14.2/transforms/e1f69cdce1fdd0e8f6ad70b6d495dcf5/transformed/profileinstaller-1.4.0/AndroidManifest.xml:47:25-85
+110            </intent-filter>
+111            <intent-filter>
+111-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/codespace/.gradle/caches/8.14.2/transforms/e1f69cdce1fdd0e8f6ad70b6d495dcf5/transformed/profileinstaller-1.4.0/AndroidManifest.xml:49:13-51:29
+112                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+112-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/codespace/.gradle/caches/8.14.2/transforms/e1f69cdce1fdd0e8f6ad70b6d495dcf5/transformed/profileinstaller-1.4.0/AndroidManifest.xml:50:17-95
+112-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/codespace/.gradle/caches/8.14.2/transforms/e1f69cdce1fdd0e8f6ad70b6d495dcf5/transformed/profileinstaller-1.4.0/AndroidManifest.xml:50:25-92
+113            </intent-filter>
+114        </receiver>
+115    </application>
+116
+117</manifest>

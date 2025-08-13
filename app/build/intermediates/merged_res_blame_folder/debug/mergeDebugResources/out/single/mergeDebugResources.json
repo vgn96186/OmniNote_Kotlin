@@ -14,5 +14,9 @@
     {
         "merged": "com.example.omninote.app-debug-74:/mipmap-anydpi-v26_ic_launcher.xml.flat",
         "source": "com.example.omninote.app-main-76:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.omninote.app-debug-74:/drawable_ic_eraser.xml.flat",
+        "source": "com.example.omninote.app-main-76:/drawable/ic_eraser.xml"
     }
 ]
