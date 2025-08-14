@@ -109,39 +109,38 @@ public final class StrokeDao_Impl implements StrokeDao {
   }
 
   @Override
-  public Object insertStroke(final Stroke stroke, final Continuation<? super Long> $completion) {
+  public Object insertStroke(final Stroke stroke, final Continuation<? super Long> arg1) {
     if (stroke == null) throw new NullPointerException();
     return DBUtil.performSuspending(__db, false, true, (_connection) -> {
       return __insertAdapterOfStroke.insertAndReturnId(_connection, stroke);
-    }, $completion);
+    }, arg1);
   }
 
   @Override
-  public Object insertStrokes(final List<Stroke> strokes,
-      final Continuation<? super Unit> $completion) {
+  public Object insertStrokes(final List<Stroke> strokes, final Continuation<? super Unit> arg1) {
     if (strokes == null) throw new NullPointerException();
     return DBUtil.performSuspending(__db, false, true, (_connection) -> {
       __insertAdapterOfStroke.insert(_connection, strokes);
       return Unit.INSTANCE;
-    }, $completion);
+    }, arg1);
   }
 
   @Override
-  public Object deleteStroke(final Stroke stroke, final Continuation<? super Unit> $completion) {
+  public Object deleteStroke(final Stroke stroke, final Continuation<? super Unit> arg1) {
     if (stroke == null) throw new NullPointerException();
     return DBUtil.performSuspending(__db, false, true, (_connection) -> {
       __deleteAdapterOfStroke.handle(_connection, stroke);
       return Unit.INSTANCE;
-    }, $completion);
+    }, arg1);
   }
 
   @Override
-  public Object updateStroke(final Stroke stroke, final Continuation<? super Unit> $completion) {
+  public Object updateStroke(final Stroke stroke, final Continuation<? super Unit> arg1) {
     if (stroke == null) throw new NullPointerException();
     return DBUtil.performSuspending(__db, false, true, (_connection) -> {
       __updateAdapterOfStroke.handle(_connection, stroke);
       return Unit.INSTANCE;
-    }, $completion);
+    }, arg1);
   }
 
   @Override
@@ -200,7 +199,7 @@ public final class StrokeDao_Impl implements StrokeDao {
 
   @Override
   public Object getStrokesForNoteAndLayer(final long noteId, final int layer,
-      final Continuation<? super List<Stroke>> $completion) {
+      final Continuation<? super List<Stroke>> arg2) {
     final String _sql = "SELECT * FROM strokes WHERE noteId = ? AND layer = ? ORDER BY timestamp ASC";
     return DBUtil.performSuspending(__db, true, false, (_connection) -> {
       final SQLiteStatement _stmt = _connection.prepare(_sql);
@@ -252,12 +251,12 @@ public final class StrokeDao_Impl implements StrokeDao {
       } finally {
         _stmt.close();
       }
-    }, $completion);
+    }, arg2);
   }
 
   @Override
   public Object getStrokesSince(final long noteId, final long sinceTimestamp,
-      final Continuation<? super List<Stroke>> $completion) {
+      final Continuation<? super List<Stroke>> arg2) {
     final String _sql = "SELECT * FROM strokes WHERE noteId = ? AND timestamp > ? ORDER BY timestamp ASC";
     return DBUtil.performSuspending(__db, true, false, (_connection) -> {
       final SQLiteStatement _stmt = _connection.prepare(_sql);
@@ -309,12 +308,11 @@ public final class StrokeDao_Impl implements StrokeDao {
       } finally {
         _stmt.close();
       }
-    }, $completion);
+    }, arg2);
   }
 
   @Override
-  public Object deleteAllStrokesForNote(final long noteId,
-      final Continuation<? super Unit> $completion) {
+  public Object deleteAllStrokesForNote(final long noteId, final Continuation<? super Unit> arg1) {
     final String _sql = "DELETE FROM strokes WHERE noteId = ?";
     return DBUtil.performSuspending(__db, false, true, (_connection) -> {
       final SQLiteStatement _stmt = _connection.prepare(_sql);
@@ -326,12 +324,12 @@ public final class StrokeDao_Impl implements StrokeDao {
       } finally {
         _stmt.close();
       }
-    }, $completion);
+    }, arg1);
   }
 
   @Override
   public Object deleteStrokesForNoteAndLayer(final long noteId, final int layer,
-      final Continuation<? super Unit> $completion) {
+      final Continuation<? super Unit> arg2) {
     final String _sql = "DELETE FROM strokes WHERE noteId = ? AND layer = ?";
     return DBUtil.performSuspending(__db, false, true, (_connection) -> {
       final SQLiteStatement _stmt = _connection.prepare(_sql);
@@ -345,7 +343,7 @@ public final class StrokeDao_Impl implements StrokeDao {
       } finally {
         _stmt.close();
       }
-    }, $completion);
+    }, arg2);
   }
 
   @NonNull
@@ -359,6 +357,12 @@ public final class StrokeDao_Impl implements StrokeDao {
       case HIGHLIGHTER: return "HIGHLIGHTER";
       case ERASER: return "ERASER";
       case SHAPE_DRAWER: return "SHAPE_DRAWER";
+      case TEXT: return "TEXT";
+      case BRUSH: return "BRUSH";
+      case MASKING_TAPE: return "MASKING_TAPE";
+      case LASSO: return "LASSO";
+      case SHAPE_PEN: return "SHAPE_PEN";
+      case LASER_PEN: return "LASER_PEN";
       default: throw new IllegalArgumentException("Can't convert enum to string, unknown enum value: " + _value);
     }
   }
@@ -369,6 +373,12 @@ public final class StrokeDao_Impl implements StrokeDao {
       case "HIGHLIGHTER": return ToolType.HIGHLIGHTER;
       case "ERASER": return ToolType.ERASER;
       case "SHAPE_DRAWER": return ToolType.SHAPE_DRAWER;
+      case "TEXT": return ToolType.TEXT;
+      case "BRUSH": return ToolType.BRUSH;
+      case "MASKING_TAPE": return ToolType.MASKING_TAPE;
+      case "LASSO": return ToolType.LASSO;
+      case "SHAPE_PEN": return ToolType.SHAPE_PEN;
+      case "LASER_PEN": return ToolType.LASER_PEN;
       default: throw new IllegalArgumentException("Can't convert value to enum, unknown value: " + _value);
     }
   }

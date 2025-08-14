@@ -3,113 +3,115 @@ package com.example.omninote.viewmodel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.omninote.data.Note
+import com.example.omninote.data.NoteType
 import com.example.omninote.data.Stroke
 import com.example.omninote.repository.NoteRepository
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.StateFlow
-import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
 import java.time.LocalDateTime
 
+// Represents the overall UI state of the application
+data class UiState(
+    val notes: List<Note> = emptyList(),
+    val currentFolderId: Long? = null,
+    val selectedNoteId: Long? = null,
+    val expandedFolderIds: Set<Long> = setOf(),
+    val currentScreen: Screen = Screen.Explorer,
+    val knowledgeGraph: Map<Long, List<Long>> = emptyMap()
+)
+
+// Defines the different screens in the app
+enum class Screen {
+    Explorer,
+    Graph,
+    Settings
+}
+
 class NoteViewModel(private val repository: NoteRepository) : ViewModel() {
-    
-    private val _notes = MutableStateFlow<List<Note>>(emptyList())
-    val notes: StateFlow<List<Note>> = _notes.asStateFlow()
-    
-    private val _currentNote = MutableStateFlow<Note?>(null)
-    val currentNote: StateFlow<Note?> = _currentNote.asStateFlow()
-    
+
+    private val _uiState = MutableStateFlow(UiState())
+    val uiState: StateFlow<UiState> = _uiState.asStateFlow()
+
+    // Separate flow for strokes of the currently selected note
     private val _strokes = MutableStateFlow<List<Stroke>>(emptyList())
     val strokes: StateFlow<List<Stroke>> = _strokes.asStateFlow()
-    
-    private val _searchResults = MutableStateFlow<List<Note>>(emptyList())
-    val searchResults: StateFlow<List<Note>> = _searchResults.asStateFlow()
-    
-    private val _knowledgeGraph = MutableStateFlow<Map<Long, List<Long>>>(emptyMap())
-    val knowledgeGraph: StateFlow<Map<Long, List<Long>>> = _knowledgeGraph.asStateFlow()
-    
+
     init {
+        // Load initial data when the ViewModel is created
         viewModelScope.launch {
-            repository.ensureSampleDataLoaded()
-        }
-        loadNotes()
-        loadKnowledgeGraph()
-    }
-    
-    private fun loadNotes() {
-        viewModelScope.launch {
-            repository.getAllNotes().collect { notesList ->
-                _notes.value = notesList
+            repository.getAllNotes().collect { notes ->
+                _uiState.update { it.copy(notes = notes) }
             }
         }
+        loadKnowledgeGraph()
     }
-    
-    private fun loadKnowledgeGraph() {
-        viewModelScope.launch {
-            _knowledgeGraph.value = repository.getKnowledgeGraph()
+
+    // Public functions to handle user actions and update the state
+
+    fun setCurrentFolder(folderId: Long?) {
+        _uiState.update { it.copy(currentFolderId = folderId, selectedNoteId = null) }
+    }
+
+    fun selectNote(noteId: Long?) {
+        _uiState.update { it.copy(selectedNoteId = noteId) }
+        if (noteId != null) {
+            loadStrokesForNote(noteId)
+        } else {
+            _strokes.value = emptyList()
         }
     }
-    
-    fun createNote(title: String, content: String = "") {
+
+    fun toggleFolder(folderId: Long) {
+        val currentExpanded = _uiState.value.expandedFolderIds
+        _uiState.update {
+            it.copy(
+                expandedFolderIds = if (currentExpanded.contains(folderId)) {
+                    currentExpanded - folderId
+                } else {
+                    currentExpanded + folderId
+                }
+            )
+        }
+    }
+
+    fun changeScreen(screen: Screen) {
+        _uiState.update { it.copy(currentScreen = screen) }
+    }
+
+    fun createNote(title: String, type: NoteType, parentId: Long?) {
         viewModelScope.launch {
-            val note = Note(
+            val newNote = Note(
                 title = title,
-                content = content,
+                type = type,
+                parentNoteId = parentId,
                 createdAt = LocalDateTime.now(),
                 updatedAt = LocalDateTime.now()
             )
-            val noteId = repository.insertNote(note)
-            loadNotes()
-        }
-    }
-    
-    fun selectNote(note: Note) {
-        _currentNote.value = note
-        loadStrokesForNote(note.id)
-    }
-    
-    fun updateNote(note: Note) {
-        viewModelScope.launch {
-            val updatedNote = note.copy(updatedAt = LocalDateTime.now())
-            repository.updateNote(updatedNote)
-            if (_currentNote.value?.id == note.id) {
-                _currentNote.value = updatedNote
+            val newNoteId = repository.insertNote(newNote)
+            // If it's not a folder, select it immediately
+            if (type != NoteType.FOLDER) {
+                selectNote(newNoteId)
             }
         }
     }
-    
+
+    fun updateNote(note: Note) {
+        viewModelScope.launch {
+            repository.updateNote(note.copy(updatedAt = LocalDateTime.now()))
+        }
+    }
+
     fun deleteNote(note: Note) {
         viewModelScope.launch {
             repository.deleteNote(note)
-            if (_currentNote.value?.id == note.id) {
-                _currentNote.value = null
-                _strokes.value = emptyList()
+            // If the deleted note was selected, clear the selection
+            if (_uiState.value.selectedNoteId == note.id) {
+                selectNote(null)
             }
         }
     }
-    
-    fun searchNotes(query: String) {
-        viewModelScope.launch {
-            if (query.isBlank()) {
-                _searchResults.value = emptyList()
-            } else {
-                _searchResults.value = repository.searchNotes(query)
-            }
-        }
-    }
-    
-    fun addStroke(stroke: Stroke) {
-        viewModelScope.launch {
-            repository.insertStroke(stroke)
-        }
-    }
-    
-    fun addStrokes(strokes: List<Stroke>) {
-        viewModelScope.launch {
-            repository.insertStrokes(strokes)
-        }
-    }
-    
+
+    // Stroke-related operations
     private fun loadStrokesForNote(noteId: Long) {
         viewModelScope.launch {
             repository.getStrokesForNote(noteId).collect { strokesList ->
@@ -117,33 +119,30 @@ class NoteViewModel(private val repository: NoteRepository) : ViewModel() {
             }
         }
     }
-    
-    fun clearStrokes() {
+
+    fun addStroke(stroke: Stroke) {
         viewModelScope.launch {
-            _currentNote.value?.let { note ->
-                repository.deleteStrokesForNote(note.id)
-            }
+            repository.insertStroke(stroke)
         }
     }
-    
-    fun getRelatedNotes(noteId: Long) {
+
+    fun deleteStroke(stroke: Stroke) {
         viewModelScope.launch {
-            val related = repository.getRelatedNotes(noteId)
-            // You could add a separate state flow for related notes if needed
+            repository.deleteStroke(stroke)
         }
     }
-    
-    fun createLink(sourceId: Long, targetId: Long) {
+
+    fun clearStrokes(noteId: Long) {
         viewModelScope.launch {
-            repository.createLink(sourceId, targetId)
-            loadKnowledgeGraph()
+            repository.deleteStrokesForNote(noteId)
         }
     }
-    
-    fun deleteLink(sourceId: Long, targetId: Long) {
+
+    // Knowledge Graph
+    private fun loadKnowledgeGraph() {
         viewModelScope.launch {
-            repository.deleteLink(sourceId, targetId)
-            loadKnowledgeGraph()
+            val graph = repository.getKnowledgeGraph()
+            _uiState.update { it.copy(knowledgeGraph = graph) }
         }
     }
 }

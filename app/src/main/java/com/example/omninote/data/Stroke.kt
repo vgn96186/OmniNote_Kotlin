@@ -1,6 +1,5 @@
 package com.example.omninote.data
 
-import androidx.compose.ui.geometry.Offset
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import androidx.room.TypeConverters
@@ -28,9 +27,16 @@ data class Point(
     val timestamp: Long = System.currentTimeMillis()
 )
 
+// Updated Enum to include all new tools from your design
 enum class ToolType {
     PEN,
     HIGHLIGHTER,
     ERASER,
-    SHAPE_DRAWER
+    SHAPE_DRAWER, // Kept from previous version, maps to Shape Pen
+    TEXT,
+    BRUSH,
+    MASKING_TAPE,
+    LASSO,
+    SHAPE_PEN,
+    LASER_PEN
 }

@@ -12,7 +12,7 @@ import com.example.omninote.data.dao.StrokeDao
 
 @Database(
     entities = [Note::class, Stroke::class, NoteLink::class],
-    version = 1,
+    version = 2,
     exportSchema = false
 )
 @TypeConverters(Converters::class)
@@ -32,8 +32,9 @@ abstract class OmniNoteDatabase : RoomDatabase() {
                     OmniNoteDatabase::class.java,
                     "omninote_database"
                 )
-                .fallbackToDestructiveMigration()
-                .build()
+                    // Replaced deprecated method with the explicit version.
+                    .fallbackToDestructiveMigration(dropAllTables = true)
+                    .build()
                 INSTANCE = instance
                 instance
             }

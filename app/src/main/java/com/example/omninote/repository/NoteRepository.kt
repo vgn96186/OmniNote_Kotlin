@@ -15,6 +15,10 @@ class NoteRepository(
 ) {
     // Note operations
     fun getAllNotes(): Flow<List<Note>> = noteDao.getAllNotes()
+
+    fun getTopLevelNotes(): Flow<List<Note>> = noteDao.getTopLevelNotes()
+
+    fun getChildNotes(parentId: Long): Flow<List<Note>> = noteDao.getChildNotesFlow(parentId)
     
     suspend fun getNoteById(id: Long): Note? = noteDao.getNoteById(id)
     
@@ -51,7 +55,9 @@ class NoteRepository(
     suspend fun insertStrokes(strokes: List<Stroke>) = strokeDao.insertStrokes(strokes)
     
     suspend fun deleteStrokesForNote(noteId: Long) = strokeDao.deleteAllStrokesForNote(noteId)
-    
+
+    suspend fun deleteStroke(stroke: Stroke) = strokeDao.deleteStroke(stroke)
+
     // Link operations
     fun getLinksForNote(noteId: Long): Flow<List<NoteLink>> = noteLinkDao.getLinksForNote(noteId)
     
@@ -102,18 +108,10 @@ class NoteRepository(
 
     // Public function to ensure sample data exists
     suspend fun ensureSampleDataLoaded() {
+        // Clear all existing data
         val existingNotes = noteDao.getAllNotes().first()
-        if (existingNotes.isEmpty()) {
-            val sampleNotes = SampleData.getSampleNotes()
-            val sampleLinks = SampleData.getSampleLinks()
-
-            sampleNotes.forEach { note ->
-                noteDao.insertNote(note)
-            }
-
-            sampleLinks.forEach { link ->
-                noteLinkDao.insertLink(link)
-            }
+        existingNotes.forEach { note ->
+            deleteNote(note)
         }
     }
     

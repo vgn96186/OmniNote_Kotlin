@@ -39,14 +39,14 @@ public final class OmniNoteDatabase_Impl extends OmniNoteDatabase {
   @Override
   @NonNull
   protected RoomOpenDelegate createOpenDelegate() {
-    final RoomOpenDelegate _openDelegate = new RoomOpenDelegate(1, "0fe40f12b49b0520b74091042550557f", "9c2eed28c5374fd214147e9c10e65415") {
+    final RoomOpenDelegate _openDelegate = new RoomOpenDelegate(2, "96948e674143b8f832a7fa58fdd59e56", "a6e82259b94c9eeb58c91933db0f34d9") {
       @Override
       public void createAllTables(@NonNull final SQLiteConnection connection) {
-        SQLite.execSQL(connection, "CREATE TABLE IF NOT EXISTS `notes` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `title` TEXT NOT NULL, `content` TEXT NOT NULL, `createdAt` TEXT NOT NULL, `updatedAt` TEXT NOT NULL, `tags` TEXT NOT NULL, `isArchived` INTEGER NOT NULL, `parentNoteId` INTEGER, `positionX` REAL NOT NULL, `positionY` REAL NOT NULL, `width` REAL NOT NULL, `height` REAL NOT NULL)");
+        SQLite.execSQL(connection, "CREATE TABLE IF NOT EXISTS `notes` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `title` TEXT NOT NULL, `content` TEXT NOT NULL, `createdAt` TEXT NOT NULL, `updatedAt` TEXT NOT NULL, `tags` TEXT NOT NULL, `isArchived` INTEGER NOT NULL, `parentNoteId` INTEGER, `positionX` REAL NOT NULL, `positionY` REAL NOT NULL, `width` REAL NOT NULL, `height` REAL NOT NULL, `type` TEXT NOT NULL)");
         SQLite.execSQL(connection, "CREATE TABLE IF NOT EXISTS `strokes` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `noteId` INTEGER NOT NULL, `points` TEXT NOT NULL, `color` INTEGER NOT NULL, `strokeWidth` REAL NOT NULL, `pressure` REAL NOT NULL, `toolType` TEXT NOT NULL, `timestamp` INTEGER NOT NULL, `layer` INTEGER NOT NULL)");
         SQLite.execSQL(connection, "CREATE TABLE IF NOT EXISTS `note_links` (`sourceNoteId` INTEGER NOT NULL, `targetNoteId` INTEGER NOT NULL, `linkType` TEXT NOT NULL, `strength` REAL NOT NULL, `createdAt` INTEGER NOT NULL, PRIMARY KEY(`sourceNoteId`, `targetNoteId`))");
         SQLite.execSQL(connection, "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        SQLite.execSQL(connection, "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '0fe40f12b49b0520b74091042550557f')");
+        SQLite.execSQL(connection, "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '96948e674143b8f832a7fa58fdd59e56')");
       }
 
       @Override
@@ -78,7 +78,7 @@ public final class OmniNoteDatabase_Impl extends OmniNoteDatabase {
       @NonNull
       public RoomOpenDelegate.ValidationResult onValidateSchema(
           @NonNull final SQLiteConnection connection) {
-        final Map<String, TableInfo.Column> _columnsNotes = new HashMap<String, TableInfo.Column>(12);
+        final Map<String, TableInfo.Column> _columnsNotes = new HashMap<String, TableInfo.Column>(13);
         _columnsNotes.put("id", new TableInfo.Column("id", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsNotes.put("title", new TableInfo.Column("title", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsNotes.put("content", new TableInfo.Column("content", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
@@ -91,6 +91,7 @@ public final class OmniNoteDatabase_Impl extends OmniNoteDatabase {
         _columnsNotes.put("positionY", new TableInfo.Column("positionY", "REAL", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsNotes.put("width", new TableInfo.Column("width", "REAL", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsNotes.put("height", new TableInfo.Column("height", "REAL", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsNotes.put("type", new TableInfo.Column("type", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         final Set<TableInfo.ForeignKey> _foreignKeysNotes = new HashSet<TableInfo.ForeignKey>(0);
         final Set<TableInfo.Index> _indicesNotes = new HashSet<TableInfo.Index>(0);
         final TableInfo _infoNotes = new TableInfo("notes", _columnsNotes, _foreignKeysNotes, _indicesNotes);

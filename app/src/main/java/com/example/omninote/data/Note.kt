@@ -21,5 +21,13 @@ data class Note(
     val positionX: Float = 0f,
     val positionY: Float = 0f,
     val width: Float = 300f,
-    val height: Float = 400f
+    val height: Float = 400f,
+    val type: NoteType = NoteType.TEXT
 )
+
+enum class NoteType {
+    TEXT,
+    CANVAS,
+    KNOWLEDGE_GRAPH,
+    FOLDER
+}

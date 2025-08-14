@@ -91,30 +91,30 @@ public final class NoteLinkDao_Impl implements NoteLinkDao {
   }
 
   @Override
-  public Object insertLink(final NoteLink link, final Continuation<? super Unit> $completion) {
+  public Object insertLink(final NoteLink link, final Continuation<? super Unit> arg1) {
     if (link == null) throw new NullPointerException();
     return DBUtil.performSuspending(__db, false, true, (_connection) -> {
       __insertAdapterOfNoteLink.insert(_connection, link);
       return Unit.INSTANCE;
-    }, $completion);
+    }, arg1);
   }
 
   @Override
-  public Object deleteLink(final NoteLink link, final Continuation<? super Unit> $completion) {
+  public Object deleteLink(final NoteLink link, final Continuation<? super Unit> arg1) {
     if (link == null) throw new NullPointerException();
     return DBUtil.performSuspending(__db, false, true, (_connection) -> {
       __deleteAdapterOfNoteLink.handle(_connection, link);
       return Unit.INSTANCE;
-    }, $completion);
+    }, arg1);
   }
 
   @Override
-  public Object updateLink(final NoteLink link, final Continuation<? super Unit> $completion) {
+  public Object updateLink(final NoteLink link, final Continuation<? super Unit> arg1) {
     if (link == null) throw new NullPointerException();
     return DBUtil.performSuspending(__db, false, true, (_connection) -> {
       __updateAdapterOfNoteLink.handle(_connection, link);
       return Unit.INSTANCE;
-    }, $completion);
+    }, arg1);
   }
 
   @Override
@@ -157,7 +157,7 @@ public final class NoteLinkDao_Impl implements NoteLinkDao {
 
   @Override
   public Object getLink(final long sourceId, final long targetId,
-      final Continuation<? super NoteLink> $completion) {
+      final Continuation<? super NoteLink> arg2) {
     final String _sql = "SELECT * FROM note_links WHERE sourceNoteId = ? AND targetNoteId = ?";
     return DBUtil.performSuspending(__db, true, false, (_connection) -> {
       final SQLiteStatement _stmt = _connection.prepare(_sql);
@@ -191,12 +191,12 @@ public final class NoteLinkDao_Impl implements NoteLinkDao {
       } finally {
         _stmt.close();
       }
-    }, $completion);
+    }, arg2);
   }
 
   @Override
   public Object getOutgoingLinks(final long noteId,
-      final Continuation<? super List<NoteLink>> $completion) {
+      final Continuation<? super List<NoteLink>> arg1) {
     final String _sql = "SELECT * FROM note_links WHERE sourceNoteId = ?";
     return DBUtil.performSuspending(__db, true, false, (_connection) -> {
       final SQLiteStatement _stmt = _connection.prepare(_sql);
@@ -228,12 +228,12 @@ public final class NoteLinkDao_Impl implements NoteLinkDao {
       } finally {
         _stmt.close();
       }
-    }, $completion);
+    }, arg1);
   }
 
   @Override
   public Object getIncomingLinks(final long noteId,
-      final Continuation<? super List<NoteLink>> $completion) {
+      final Continuation<? super List<NoteLink>> arg1) {
     final String _sql = "SELECT * FROM note_links WHERE targetNoteId = ?";
     return DBUtil.performSuspending(__db, true, false, (_connection) -> {
       final SQLiteStatement _stmt = _connection.prepare(_sql);
@@ -265,12 +265,12 @@ public final class NoteLinkDao_Impl implements NoteLinkDao {
       } finally {
         _stmt.close();
       }
-    }, $completion);
+    }, arg1);
   }
 
   @Override
   public Object getLinksByType(final LinkType linkType,
-      final Continuation<? super List<NoteLink>> $completion) {
+      final Continuation<? super List<NoteLink>> arg1) {
     final String _sql = "SELECT * FROM note_links WHERE linkType = ?";
     return DBUtil.performSuspending(__db, true, false, (_connection) -> {
       final SQLiteStatement _stmt = _connection.prepare(_sql);
@@ -302,12 +302,11 @@ public final class NoteLinkDao_Impl implements NoteLinkDao {
       } finally {
         _stmt.close();
       }
-    }, $completion);
+    }, arg1);
   }
 
   @Override
-  public Object deleteAllLinksForNote(final long noteId,
-      final Continuation<? super Unit> $completion) {
+  public Object deleteAllLinksForNote(final long noteId, final Continuation<? super Unit> arg1) {
     final String _sql = "DELETE FROM note_links WHERE sourceNoteId = ? OR targetNoteId = ?";
     return DBUtil.performSuspending(__db, false, true, (_connection) -> {
       final SQLiteStatement _stmt = _connection.prepare(_sql);
@@ -321,7 +320,7 @@ public final class NoteLinkDao_Impl implements NoteLinkDao {
       } finally {
         _stmt.close();
       }
-    }, $completion);
+    }, arg1);
   }
 
   @NonNull

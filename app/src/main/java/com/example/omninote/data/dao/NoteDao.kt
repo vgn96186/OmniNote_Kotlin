@@ -30,6 +30,12 @@ interface NoteDao {
     @Query("UPDATE notes SET isArchived = 1 WHERE id = :noteId")
     suspend fun archiveNote(noteId: Long)
 
+    @Query("SELECT * FROM notes WHERE isArchived = 0 AND parentNoteId IS NULL ORDER BY updatedAt DESC")
+    fun getTopLevelNotes(): Flow<List<Note>>
+
+    @Query("SELECT * FROM notes WHERE isArchived = 0 AND parentNoteId = :parentId ORDER BY updatedAt DESC")
+    fun getChildNotesFlow(parentId: Long): Flow<List<Note>>
+
     @Query("SELECT * FROM notes WHERE parentNoteId = :parentId")
-    suspend fun getChildNotes(parentId: Long): List<Note>
+    suspend fun getChildNotesSuspend(parentId: Long): List<Note>
 }

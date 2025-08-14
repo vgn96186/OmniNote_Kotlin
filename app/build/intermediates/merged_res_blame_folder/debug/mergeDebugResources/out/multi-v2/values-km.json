@@ -4,7 +4,7 @@
             "outputFile": "com.example.omninote.app-mergeDebugResources-72:/values-km/values-km.xml",
             "map": [
                 {
-                    "source": "/home/codespace/.gradle/caches/8.14.2/transforms/dc7d22ac1bfa8a2dfbde89db674b3e4a/transformed/material3-release/res/values-km/values-km.xml",
+                    "source": "/Users/vishnugnair/.gradle/caches/8.14.2/transforms/dc7d22ac1bfa8a2dfbde89db674b3e4a/transformed/material3-release/res/values-km/values-km.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -21,58 +21,7 @@
                     }
                 },
                 {
-                    "source": "/home/codespace/.gradle/caches/8.14.2/transforms/dd98322f19675faa3e94fcb1e8bebe89/transformed/foundation-release/res/values-km/values-km.xml",
-                    "from": {
-                        "startLines": "2,3,4",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "55,142,233",
-                        "endColumns": "86,90,91",
-                        "endOffsets": "137,228,320"
-                    },
-                    "to": {
-                        "startLines": "33,194,195",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "3007,17915,18006",
-                        "endColumns": "86,90,91",
-                        "endOffsets": "3089,18001,18093"
-                    }
-                },
-                {
-                    "source": "/home/codespace/.gradle/caches/8.14.2/transforms/1900cfc0a057140389eb2befd4a08235/transformed/core-1.16.0/res/values-km/values-km.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,150,253,351,451,552,664,776",
-                        "endColumns": "94,102,97,99,100,111,111,100",
-                        "endOffsets": "145,248,346,446,547,659,771,872"
-                    },
-                    "to": {
-                        "startLines": "39,40,41,42,43,44,45,190",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "3486,3581,3684,3782,3882,3983,4095,17546",
-                        "endColumns": "94,102,97,99,100,111,111,100",
-                        "endOffsets": "3576,3679,3777,3877,3978,4090,4202,17642"
-                    }
-                },
-                {
-                    "source": "/home/codespace/.gradle/caches/8.14.2/transforms/41d5a5311579fed5916237ea8a3a2210/transformed/ui-release/res/values-km/values-km.xml",
-                    "from": {
-                        "startLines": "3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "193,278,358,462,560,648,732,815,900,987,1067,1152,1228,1316,1390,1462,1533,1617,1683",
-                        "endColumns": "84,79,103,97,87,83,82,84,86,79,84,75,87,73,71,70,83,65,117",
-                        "endOffsets": "273,353,457,555,643,727,810,895,982,1062,1147,1223,1311,1385,1457,1528,1612,1678,1796"
-                    },
-                    "to": {
-                        "startLines": "49,50,51,52,53,58,59,176,177,179,180,184,186,187,188,189,191,192,193",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "4499,4584,4664,4768,4866,5249,5333,16425,16510,16680,16760,17089,17241,17329,17403,17475,17647,17731,17797",
-                        "endColumns": "84,79,103,97,87,83,82,84,86,79,84,75,87,73,71,70,83,65,117",
-                        "endOffsets": "4579,4659,4763,4861,4949,5328,5411,16505,16592,16755,16840,17160,17324,17398,17470,17541,17726,17792,17910"
-                    }
-                },
-                {
-                    "source": "/home/codespace/.gradle/caches/8.14.2/transforms/5204ce6d3deefbf5207059f0889c5835/transformed/material-1.12.0/res/values-km/values-km.xml",
+                    "source": "/Users/vishnugnair/.gradle/caches/8.14.2/transforms/5204ce6d3deefbf5207059f0889c5835/transformed/material-1.12.0/res/values-km/values-km.xml",
                     "from": {
                         "startLines": "2,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -91,7 +40,58 @@
                     }
                 },
                 {
-                    "source": "/home/codespace/.gradle/caches/8.14.2/transforms/86d00c0f6a1a49a4b6cab708883d0d3f/transformed/appcompat-1.6.1/res/values-km/values-km.xml",
+                    "source": "/Users/vishnugnair/.gradle/caches/8.14.2/transforms/dd98322f19675faa3e94fcb1e8bebe89/transformed/foundation-release/res/values-km/values-km.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,142,233",
+                        "endColumns": "86,90,91",
+                        "endOffsets": "137,228,320"
+                    },
+                    "to": {
+                        "startLines": "33,194,195",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "3007,17915,18006",
+                        "endColumns": "86,90,91",
+                        "endOffsets": "3089,18001,18093"
+                    }
+                },
+                {
+                    "source": "/Users/vishnugnair/.gradle/caches/8.14.2/transforms/1900cfc0a057140389eb2befd4a08235/transformed/core-1.16.0/res/values-km/values-km.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,150,253,351,451,552,664,776",
+                        "endColumns": "94,102,97,99,100,111,111,100",
+                        "endOffsets": "145,248,346,446,547,659,771,872"
+                    },
+                    "to": {
+                        "startLines": "39,40,41,42,43,44,45,190",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "3486,3581,3684,3782,3882,3983,4095,17546",
+                        "endColumns": "94,102,97,99,100,111,111,100",
+                        "endOffsets": "3576,3679,3777,3877,3978,4090,4202,17642"
+                    }
+                },
+                {
+                    "source": "/Users/vishnugnair/.gradle/caches/8.14.2/transforms/41d5a5311579fed5916237ea8a3a2210/transformed/ui-release/res/values-km/values-km.xml",
+                    "from": {
+                        "startLines": "3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "193,278,358,462,560,648,732,815,900,987,1067,1152,1228,1316,1390,1462,1533,1617,1683",
+                        "endColumns": "84,79,103,97,87,83,82,84,86,79,84,75,87,73,71,70,83,65,117",
+                        "endOffsets": "273,353,457,555,643,727,810,895,982,1062,1147,1223,1311,1385,1457,1528,1612,1678,1796"
+                    },
+                    "to": {
+                        "startLines": "49,50,51,52,53,58,59,176,177,179,180,184,186,187,188,189,191,192,193",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "4499,4584,4664,4768,4866,5249,5333,16425,16510,16680,16760,17089,17241,17329,17403,17475,17647,17731,17797",
+                        "endColumns": "84,79,103,97,87,83,82,84,86,79,84,75,87,73,71,70,83,65,117",
+                        "endOffsets": "4579,4659,4763,4861,4949,5328,5411,16505,16592,16755,16840,17160,17324,17398,17470,17541,17726,17792,17910"
+                    }
+                },
+                {
+                    "source": "/Users/vishnugnair/.gradle/caches/8.14.2/transforms/86d00c0f6a1a49a4b6cab708883d0d3f/transformed/appcompat-1.6.1/res/values-km/values-km.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.isSystemInDarkTheme
-// import androidx.compose.runtime.* // Unused import
+
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.omninote.data.OmniNoteDatabase
 import com.example.omninote.repository.NoteRepository
