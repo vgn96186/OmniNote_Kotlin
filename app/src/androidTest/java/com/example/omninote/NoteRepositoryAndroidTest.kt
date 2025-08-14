@@ -54,5 +54,3 @@ class NoteRepositoryAndroidTest {
         Assert.assertEquals(note.title, retrievedNote?.title)
     }
 }
-
-

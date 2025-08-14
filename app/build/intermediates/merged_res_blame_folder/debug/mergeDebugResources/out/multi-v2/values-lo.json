@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.omninote.app-mergeDebugResources-72:/values-lo/values-lo.xml",
+            "outputFile": "com.example.omninote.app-mergeDebugResources-74:/values-lo/values-lo.xml",
             "map": [
                 {
                     "source": "/Users/vishnugnair/.gradle/caches/8.14.2/transforms/dc7d22ac1bfa8a2dfbde89db674b3e4a/transformed/material3-release/res/values-lo/values-lo.xml",

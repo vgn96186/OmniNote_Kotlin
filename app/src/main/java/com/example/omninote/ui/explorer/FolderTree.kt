@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
 import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
@@ -40,7 +41,7 @@ fun FolderTree(
         ) {
             Text("Workspace", style = MaterialTheme.typography.titleMedium)
             IconButton(onClick = { onFolderClick(null) }) {
-                Icon(Icons.Default.Home, contentDescription = "Go to Root")
+                Icon(Icons.Filled.Home, contentDescription = "Go to Root")
             }
         }
 
@@ -91,13 +92,13 @@ private fun TreeItem(
             verticalAlignment = Alignment.CenterVertically
         ) {
             Icon(
-                imageVector = if (isExpanded) Icons.Default.KeyboardArrowDown else Icons.Default.KeyboardArrowRight,
-                contentDescription = "Expand/Collapse",
-                modifier = Modifier.clickable { onToggleExpand(note.id) }
+                imageVector = if (isExpanded) Icons.Filled.KeyboardArrowDown else Icons.AutoMirrored.Filled.KeyboardArrowRight,
+                contentDescription = if (isExpanded) "Collapse" else "Expand",
+                modifier = Modifier.size(20.dp)
             )
             Icon(
                 imageVector = if (isExpanded) Icons.Filled.FolderOpen else Icons.Filled.Folder,
-                contentDescription = "Folder",
+                contentDescription = "Folder Icon",
                 tint = MaterialTheme.colorScheme.secondary,
                 modifier = Modifier.padding(horizontal = 8.dp)
             )
@@ -123,5 +124,19 @@ private fun TreeItem(
                 }
             }
         }
+    }
+}
+
+@Composable
+fun HomeButton(onClick: () -> Unit) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .clickable(onClick = onClick)
+            .padding(16.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Icon(Icons.Filled.Home, contentDescription = "Home", modifier = Modifier.padding(end = 8.dp))
+        Text("Home", style = MaterialTheme.typography.bodyLarge)
     }
 }

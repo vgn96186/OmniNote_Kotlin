@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.omninote.app-mergeDebugResources-72:/values/values.xml",
+            "outputFile": "com.example.omninote.app-mergeDebugResources-74:/values/values.xml",
             "map": [
                 {
                     "source": "/Users/vishnugnair/.gradle/caches/8.14.2/transforms/8d6df61b3a2603e200bb85399f228738/transformed/navigation-runtime-release/res/values/values.xml",

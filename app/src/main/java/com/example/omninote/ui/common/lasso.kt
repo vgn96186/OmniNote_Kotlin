@@ -8,6 +8,8 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.Redo
+import androidx.compose.material.icons.automirrored.filled.Undo
 import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -52,7 +54,7 @@ fun AdvancedCanvasToolbar(
             // Pen Selection
             Box {
                 IconButton(onClick = { showPens = true }) {
-                    Icon(Icons.Default.Edit, contentDescription = "Pens")
+                    Icon(Icons.Filled.Edit, contentDescription = "Pens")
                 }
                 PensMenu(
                     expanded = showPens,
@@ -66,7 +68,7 @@ fun AdvancedCanvasToolbar(
 
             // Eraser
             ToolbarIconButton(
-                icon = Icons.Default.Crop,
+                icon = Icons.Filled.Crop,
                 contentDescription = "Eraser",
                 isSelected = currentTool == ToolType.ERASER,
                 onClick = { onToolChange(ToolType.ERASER) }
@@ -74,7 +76,7 @@ fun AdvancedCanvasToolbar(
 
             // Lasso
             ToolbarIconButton(
-                icon = Icons.Default.CropFree,
+                icon = Icons.Filled.CropFree,
                 contentDescription = "Lasso",
                 isSelected = false, // Add logic for lasso selection state
                 onClick = { /* onToolChange(ToolType.LASSO) */ }
@@ -108,7 +110,7 @@ fun AdvancedCanvasToolbar(
             // Brush Thickness
             Box {
                 IconButton(onClick = { showWidths = true }) {
-                    Icon(Icons.Default.LineWeight, contentDescription = "Brush Thickness")
+                    Icon(Icons.Filled.LineWeight, contentDescription = "Brush Thickness")
                 }
                 WidthsMenu(
                     expanded = showWidths,
@@ -124,10 +126,10 @@ fun AdvancedCanvasToolbar(
 
             // Undo/Redo
             IconButton(onClick = onUndo) {
-                Icon(Icons.Default.Undo, contentDescription = "Undo")
+                Icon(Icons.AutoMirrored.Filled.Undo, contentDescription = "Undo")
             }
             IconButton(onClick = onRedo) {
-                Icon(Icons.Default.Redo, contentDescription = "Redo")
+                Icon(Icons.AutoMirrored.Filled.Redo, contentDescription = "Redo")
             }
         }
     }
@@ -153,12 +155,12 @@ private fun PensMenu(expanded: Boolean, onDismiss: () -> Unit, onToolSelect: (To
     ) {
         DropdownMenuItem(
             text = { Text("Pen") },
-            leadingIcon = { Icon(Icons.Default.Edit, null) },
+            leadingIcon = { Icon(Icons.Filled.Edit, null) },
             onClick = { onToolSelect(ToolType.PEN) }
         )
         DropdownMenuItem(
             text = { Text("Highlighter") },
-            leadingIcon = { Icon(Icons.Default.Brush, null) },
+            leadingIcon = { Icon(Icons.Filled.Brush, null) },
             onClick = { onToolSelect(ToolType.HIGHLIGHTER) }
         )
     }

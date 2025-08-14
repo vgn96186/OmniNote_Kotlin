@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.omninote.app-mergeDebugResources-72:/values-en-rGB/values-en-rGB.xml",
+            "outputFile": "com.example.omninote.app-mergeDebugResources-74:/values-en-rGB/values-en-rGB.xml",
             "map": [
                 {
                     "source": "/Users/vishnugnair/.gradle/caches/8.14.2/transforms/dc7d22ac1bfa8a2dfbde89db674b3e4a/transformed/material3-release/res/values-en-rGB/values-en-rGB.xml",

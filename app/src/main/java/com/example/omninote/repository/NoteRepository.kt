@@ -93,7 +93,8 @@ class NoteRepository(
         val words = content.lowercase().split(Regex("""\s+""")).filter { it.length > 3 }
         
         allNotes.filter { it.id != noteId }.forEach { otherNote ->
-            val otherWords = otherNote.content.lowercase().split(Regex("""\s+""")).filter { it.length > 3 }
+            val otherContent = otherNote.content
+            val otherWords = otherContent.lowercase().split(Regex("""\s+""")).filter { it.length > 3 }
             val commonWords = words.intersect(otherWords.toSet())
             
             if (commonWords.size >= 2) {

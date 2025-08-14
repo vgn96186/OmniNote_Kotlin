@@ -12,10 +12,10 @@ data class Stroke(
     val id: Long = 0,
     val noteId: Long,
     val points: List<Point>,
+    val tool: ToolType,
     val color: Int, // ARGB color
     val strokeWidth: Float,
     val pressure: Float = 1.0f,
-    val toolType: ToolType = ToolType.PEN,
     val timestamp: Long = System.currentTimeMillis(),
     val layer: Int = 0
 )
@@ -27,16 +27,10 @@ data class Point(
     val timestamp: Long = System.currentTimeMillis()
 )
 
-// Updated Enum to include all new tools from your design
 enum class ToolType {
     PEN,
     HIGHLIGHTER,
     ERASER,
-    SHAPE_DRAWER, // Kept from previous version, maps to Shape Pen
     TEXT,
-    BRUSH,
-    MASKING_TAPE,
-    LASSO,
-    SHAPE_PEN,
-    LASER_PEN
+    LASSO
 }

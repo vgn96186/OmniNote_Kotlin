@@ -9,10 +9,12 @@ import com.example.omninote.data.converters.Converters
 import com.example.omninote.data.dao.NoteDao
 import com.example.omninote.data.dao.NoteLinkDao
 import com.example.omninote.data.dao.StrokeDao
+// Import XMLInputFactory to create a secure XML parser
+// javax.xml.stream.XMLInputFactory
 
 @Database(
     entities = [Note::class, Stroke::class, NoteLink::class],
-    version = 2,
+    version = 3,
     exportSchema = false
 )
 @TypeConverters(Converters::class)
@@ -32,7 +34,6 @@ abstract class OmniNoteDatabase : RoomDatabase() {
                     OmniNoteDatabase::class.java,
                     "omninote_database"
                 )
-                    // Replaced deprecated method with the explicit version.
                     .fallbackToDestructiveMigration(dropAllTables = true)
                     .build()
                 INSTANCE = instance

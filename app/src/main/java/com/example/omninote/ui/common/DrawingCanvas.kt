@@ -20,7 +20,7 @@ import androidx.compose.ui.input.pointer.pointerInput
 import com.example.omninote.data.Point
 import com.example.omninote.data.Stroke as DataStroke
 import com.example.omninote.data.ToolType
-import kotlin.math.abs
+import kotlin.math.sqrt
 
 @Composable
 fun DrawingCanvas(
@@ -40,6 +40,8 @@ fun DrawingCanvas(
 ) {
     var scale by remember { mutableFloatStateOf(1f) }
     var offset by remember { mutableStateOf(Offset.Zero) }
+    var pendingPoints by remember { mutableStateOf<List<Point>>(emptyList()) }
+    var lastUpdateTime by remember { mutableLongStateOf(0L) }
     
     val surfaceColor = MaterialTheme.colorScheme.surface
     val gridColor = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.3f)
@@ -49,44 +51,57 @@ fun DrawingCanvas(
         modifier = modifier
             .fillMaxSize()
             .background(surfaceColor)
-            .pointerInput(Unit) {
+            .pointerInput("pan-zoom") {
                 detectTransformGestures { _, pan, zoom, _ ->
                     scale = (scale * zoom).coerceIn(0.3f, 4f)
                     offset += pan
                 }
             }
-            .pointerInput(toolType, strokeColor, strokeWidth, stylusOnly) {
+            .pointerInput("draw") {
                 detectDragGestures(
-                    onDragStart = { touchOffset ->
+                    onDragStart = { startOffset ->
+                        pendingPoints = emptyList()
                         val startPoint = Point(
-                            x = (touchOffset.x - offset.x) / scale,
-                            y = (touchOffset.y - offset.y) / scale
+                            x = (startOffset.x - offset.x) / scale,
+                            y = (startOffset.y - offset.y) / scale
                         )
                         val newStroke = DataStroke(
-                            noteId = 0, // Will be set correctly in the ViewModel
+                            noteId = 0,
                             points = listOf(startPoint),
                             color = strokeColor.toArgb(),
                             strokeWidth = strokeWidth,
-                            toolType = toolType
+                            tool = toolType
                         )
                         onStrokeStart(newStroke)
                     },
-                    onDrag = { change, _ ->
+                    onDrag = { change, dragAmount ->
+                        val currentTime = System.currentTimeMillis()
                         val newPoint = Point(
                             x = (change.position.x - offset.x) / scale,
                             y = (change.position.y - offset.y) / scale
                         )
-                        currentStroke?.let {
-                            onStrokeUpdate(it.copy(points = it.points + newPoint))
+                        pendingPoints = pendingPoints + newPoint
+                        if (currentTime - lastUpdateTime > 16) {
+                            currentStroke?.let {
+                                val optimizedPoints = downsamplePoints(pendingPoints, epsilon = 2f)
+                                onStrokeUpdate(it.copy(points = it.points + optimizedPoints))
+                                pendingPoints = emptyList()
+                                lastUpdateTime = currentTime
+                            }
                         }
                     },
                     onDragEnd = {
+                        if (pendingPoints.isNotEmpty()) {
+                            currentStroke?.let {
+                                val optimizedPoints = downsamplePoints(pendingPoints, epsilon = 2f)
+                                onStrokeUpdate(it.copy(points = it.points + optimizedPoints))
+                            }
+                        }
                         currentStroke?.let { onStrokeEnd(it) }
                     }
                 )
             }
     ) {
-        // Draw grid and dots first, underneath the strokes
         if (showGrid) {
             drawGrid(step = 32f * scale, offset = offset, color = gridColor)
         }
@@ -94,13 +109,16 @@ fun DrawingCanvas(
             drawDots(step = 32f * scale, offset = offset, radius = 1.5f * scale, color = dotColor)
         }
 
-        // Apply transformations for drawing strokes
         withTransform({
             translate(offset.x, offset.y)
             scale(scale, scale)
         }) {
-            strokes.forEach { stroke -> drawStroke(stroke) }
-            currentStroke?.let { stroke -> drawStroke(stroke) }
+            strokes.forEach { stroke ->
+                drawStroke(stroke)
+            }
+            currentStroke?.let { stroke ->
+                drawStroke(stroke)
+            }
         }
     }
 }
@@ -108,15 +126,7 @@ fun DrawingCanvas(
 private fun DrawScope.drawStroke(stroke: DataStroke) {
     if (stroke.points.size < 2) return
 
-    val path = Path().apply {
-        moveTo(stroke.points.first().x, stroke.points.first().y)
-        for (i in 1 until stroke.points.size) {
-            val p1 = stroke.points[i - 1]
-            val p2 = stroke.points[i]
-            // For smoother curves, you can use quadraticBezierTo
-            quadraticBezierTo(p1.x, p1.y, (p1.x + p2.x) / 2, (p1.y + p2.y) / 2)
-        }
-    }
+    val path = createPath(stroke.points)
     drawPath(
         path = path,
         color = Color(stroke.color),
@@ -155,4 +165,37 @@ private fun DrawScope.drawDots(step: Float, offset: Offset, radius: Float, color
         }
         x += step
     }
+}
+
+private fun createPath(points: List<Point>): Path {
+    if (points.size < 2) return Path()
+    
+    return Path().apply {
+        moveTo(points.first().x, points.first().y)
+        for (i in 1 until points.size) {
+            lineTo(points[i].x, points[i].y)
+        }
+    }
+}
+
+private fun downsamplePoints(points: List<Point>, epsilon: Float): List<Point> {
+    if (points.size <= 2) return points
+    
+    val result = mutableListOf<Point>()
+    result.add(points.first())
+    
+    for (i in 1 until points.size - 1) {
+        val prev = result.last()
+        val current = points[i]
+        val distance = sqrt(
+            (current.x - prev.x) * (current.x - prev.x) + 
+            (current.y - prev.y) * (current.y - prev.y)
+        )
+        if (distance >= epsilon) {
+            result.add(current)
+        }
+    }
+    
+    result.add(points.last())
+    return result
 }

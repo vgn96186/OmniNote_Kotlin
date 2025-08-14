@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.omninote.app-mergeDebugResources-72:/values-en-rAU/values-en-rAU.xml",
+            "outputFile": "com.example.omninote.app-mergeDebugResources-74:/values-en-rAU/values-en-rAU.xml",
             "map": [
                 {
                     "source": "/Users/vishnugnair/.gradle/caches/8.14.2/transforms/1900cfc0a057140389eb2befd4a08235/transformed/core-1.16.0/res/values-en-rAU/values-en-rAU.xml",

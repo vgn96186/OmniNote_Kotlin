@@ -1,12 +1,17 @@
 package com.example.omninote.ui.note
 
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Close
-import androidx.compose.material.icons.filled.Done
+import androidx.compose.material.icons.filled.*
+import androidx.compose.material.icons.outlined.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.focus.focusProperties
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import com.example.omninote.data.Note
 import com.example.omninote.data.NoteType
@@ -32,6 +37,9 @@ fun NoteDetailScreen(
         }
     }
 
+    val uiState by viewModel.uiState.collectAsState()
+    var showGrid by rememberSaveable { mutableStateOf(false) }
+    
     Scaffold(
         topBar = {
             TopAppBar(
@@ -42,10 +50,8 @@ fun NoteDetailScreen(
                     }
                 },
                 actions = {
-                    // Show a save button only for text notes
                     if (note.type == NoteType.TEXT) {
                         IconButton(onClick = {
-                            // Explicitly save the note and then close.
                             viewModel.updateNote(note.copy(content = currentContent))
                             onClose()
                         }) {
@@ -54,7 +60,8 @@ fun NoteDetailScreen(
                     }
                 }
             )
-        }
+        },
+
     ) { padding ->
         Column(modifier = Modifier.padding(padding).padding(horizontal = 16.dp)) {
             when (note.type) {
