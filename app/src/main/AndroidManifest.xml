@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Permissions -->
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+    <!-- Removed deprecated storage permissions; app uses app-scoped external files via FileProvider -->
     <uses-permission android:name="android.permission.CAMERA" />
     
     <!-- S Pen support -->
@@ -15,13 +14,13 @@
         android:required="false" />
 
     <application
+        android:name=".OmniNoteApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="OmniNote"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.OmniNote"
-        android:requestLegacyExternalStorage="true">
+        android:theme="@style/Theme.OmniNote">
 
         <activity
             android:name=".MainActivity"

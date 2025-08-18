@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.omninote.app-mergeDebugResources-74:/values-v16/values-v16.xml",
+            "outputFile": "com.omninote.app-mergeDebugResources-77:/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "/Users/vishnugnair/.gradle/caches/8.14.2/transforms/86d00c0f6a1a49a4b6cab708883d0d3f/transformed/appcompat-1.6.1/res/values-v16/values-v16.xml",
+                    "source": "/Users/vishnugnair/.gradle/caches/9.0.0/transforms/55045df316197953e46ffd4ea6313207/transformed/appcompat-1.6.1/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
